@@ -25,7 +25,7 @@ class CasSurface:
         self.PML_bounding_box = self.PML_mesh.bounding_box()
 
         #set voxel
-        self.voxel=voxel.MeshVoxel(self.PML_bounding_box, oversize=0.0000002)
+        self.voxel=voxel.MeshVoxel(self.PML_bounding_box, i_oversize=1.2)
 
 
     
@@ -135,7 +135,7 @@ class CasSurface:
         plotter.add_mesh(polyline, color='blue', line_width=2)
 
         # Add the vertices to the plotter
-        plotter.add_points(points, color='red', point_size=10)
+        plotter.add_points(points, color='red', point_size=4)
 
         return plotter            
         

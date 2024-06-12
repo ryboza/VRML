@@ -1,6 +1,6 @@
 import pymeshlab
 from voxel import MeshVoxel 
-import CasSurface
+import cas_surface
 #import matplotlib.pyplot as plt
 import numpy as np
 class Cas:
@@ -17,7 +17,7 @@ class Cas:
         for i  in range(1, self.ms.mesh_number()+1):
             self.ms.set_current_mesh(i)
             #set output object
-            surface = CasSurface.CasSurface(self.ms, self.ms.current_mesh())            
+            surface = cas_surface.CasSurface(self.ms, self.ms.current_mesh())            
             self.DomainCollector.append(surface)
             #self.ax = surface.plot_edges_3d(self.ax)
             self.ax = surface.plot_edges_3d_pyvista(self.ax)
